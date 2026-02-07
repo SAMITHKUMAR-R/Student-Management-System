@@ -1,10 +1,8 @@
 # Student Management System
 import json
 
-# File to store student data
 FILE = "students.json"
 
-# Load existing data
 def load_data():
     try:
         with open(FILE, "r") as f:
@@ -12,12 +10,10 @@ def load_data():
     except:
         return []
 
-# Save data to file
 def save_data(students):
     with open(FILE, "w") as f:
         json.dump(students, f, indent=4)
 
-# Add a student
 def add_student():
     students = load_data()
     student = {}
@@ -29,7 +25,6 @@ def add_student():
     save_data(students)
     print("Student added successfully!")
 
-# View all students
 def view_students():
     students = load_data()
     if students:
@@ -38,7 +33,6 @@ def view_students():
     else:
         print("No student records found.")
 
-# Update student
 def update_student():
     students = load_data()
     sid = input("Enter Student ID to update: ")
@@ -52,7 +46,6 @@ def update_student():
             return
     print("Student not found.")
 
-# Delete student
 def delete_student():
     students = load_data()
     sid = input("Enter Student ID to delete: ")
@@ -84,3 +77,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
