@@ -1,5 +1,4 @@
 # Student Management System
-
 import json
 
 FILE = "students.json"
@@ -57,7 +56,7 @@ def delete_student():
     else:
         print("Student not found.")
 
-# ---Main menu---
+# Main menu
 def main():
     while True:
         print("\n--- Student Management System ---")
