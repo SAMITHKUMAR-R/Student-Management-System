@@ -1,6 +1,5 @@
 # Student Management System
 import json
-
 FILE = "students.json"
 
 def load_data():
@@ -32,7 +31,6 @@ def view_students():
             print(f"ID: {s['id']}, Name: {s['name']}, Age: {s['age']}, Course: {s['course']}")
     else:
         print("No student records found.")
-
 def update_student():
     students = load_data()
     sid = input("Enter Student ID to update: ")
@@ -45,7 +43,6 @@ def update_student():
             print("Student updated successfully!")
             return
     print("Student not found.")
-
 def delete_student():
     students = load_data()
     sid = input("Enter Student ID to delete: ")
@@ -77,3 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
